@@ -5,6 +5,7 @@ CS50's Web Programming with Python and JavaScript. I used several technologies i
 
 ## Photos
 
+| ------ |
 | ![](https://user-images.githubusercontent.com/43954783/98133401-d66c3500-1ebd-11eb-9771-30c7524336ea.JPG) |
 | ------ |
 | ![ec-2](https://user-images.githubusercontent.com/43954783/98133917-75912c80-1ebe-11eb-8c95-967de7d098b9.JPG) |
