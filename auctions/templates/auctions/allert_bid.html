@@ -1,0 +1,13 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+    <div class="alert alert-danger" role="alert">
+      Cannot complete that bit! Bit have to be greater than actual price and cannot be completed on closed auction!
+    </div>
+
+    <br/>
+
+    <a href="{% url 'listing' listing.pk %}">Go back</a>
+
+{% endblock %}

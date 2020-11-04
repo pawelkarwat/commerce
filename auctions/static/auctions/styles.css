@@ -1,0 +1,26 @@
+body {
+    padding: 10px;
+}
+
+#main_title {
+    font-family: Apple, Chancery, cursive;
+    color: orange;
+}
+
+.create_block {
+    width: 50%;
+    padding: 20px;
+    padding-top: 5px;
+    padding-left: 0px;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+}
+
+#categories {
+    text-align: center;
+}
+
+

@@ -1,0 +1,57 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+<div class="create_block">
+
+    {% if user.is_authenticated %}
+
+        <form action="{% url 'create_submit' %}" method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input id="title" class="form-control" type="text" name="title" placeholder="Enter title">
+            </div>
+
+            <div class="form-group">
+                <label for="image_url">Image URL</label>
+                <input id="image_url" class="form-control" type="text" name="image_url" placeholder="Enter image URL">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" class="form-control" type="text" name="description" placeholder="Enter description" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" class="form-control" name="category">
+                    {% for category in categories %}
+                        <option>{{ category }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Enter starting bid</label>
+                <input id="price" class="form-control" type="number" name="price">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="submit">
+            </div>
+
+        </form>
+
+    {% else %}
+
+    <div class="alert alert-danger" role="alert">
+        You have to <a href="{% url 'login' %}" class="alert-link">log in</a>!
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+<div class="create_block">
+    <h3>Chose category:</h3>
+    <br/>
+
+    <div id="categories" class="list-group">
+        {% for category in categories %}
+
+            <a href="{% url 'category_listing' category %}" class="list-group-item list-group-item-action list-group-item-light">{{ category }}</a>
+            <br/>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>{{ title }}</h2>
+
+    <br/>
+
+    {% for listing in listings %}
+
+    <div class="card" style="width: 30rem;">
+        <img src="{{ listing.image_url }}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{ listing.title }}</h5>
+            <p class="card-text">{{ listing.max_bid }}$</p>
+            <a href="{% url 'listing' listing.pk %}" class="btn btn-primary">Check it!</a>
+        </div>
+    </div>
+
+    {% endfor %}
+
+{% endblock %}
